@@ -1,6 +1,8 @@
 # Enigma Machine
 Enigma Machine Sim
 
+Now we are working in convert this program in a command line tool.
+
 ## Install/ Compile
 
 In the shell on the directory path write: 
