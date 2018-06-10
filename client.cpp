@@ -2,7 +2,7 @@
 #include "Enigma.h"
 using namespace std;
 
-int main ()
+int main()
 {
 	Enigma Machine;
 	char l;
