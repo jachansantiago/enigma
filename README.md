@@ -1,4 +1,4 @@
-# Enigma_Machine
+# Enigma Machine
 Enigma Machine Sim
 
 ## Install/ Compile
