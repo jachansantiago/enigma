@@ -1,24 +1,38 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <unistd.h>
+#include "Enigma.h"
 
 using namespace std;
 
 bool validPlug(string);
+void help();
+
 
 int main(int argc, char * const argv[])
 {
 	char c;
+	string buff;
 	string ROTOR_CONF = "QWE";
 	string PLUG_CONFIG = "";
 	string MESSAGE = "";
 	bool fromFile = false;
+	bool outputFile = false;
 	bool plugBoard = false;
 	bool fromMessage = false;
 	bool space = true;
 	string FILE = "";
+	string input;
+	ofstream outFile;
+	string OUT_FILE;
+	Enigma Machine;
 
-	while( (c = getopt(argc, argv, "f:r:p:w:m:")) != EOF){
+	while( (c = getopt(argc, argv, "h:f:r:p:w:m:o:")) != EOF){
 		switch(c){
+			case 'h':
+				help();
+				return 0;
 			case 'r':
 				ROTOR_CONF = optarg;
 				if(ROTOR_CONF.length() != 3){
@@ -47,14 +61,68 @@ int main(int argc, char * const argv[])
  					space = false;
  				}
  				break;
+ 			case 'o':
+ 				outputFile = true;
+ 				OUT_FILE = optarg;
+ 				break;
+ 			case '?':
+ 				return 1;
 			default:
-				cerr << "Unknown Option: " << string(optarg) << endl;
+				cerr << "Unknown Option: " << endl;
 				return 1;
 		}
 	}
 
-	argc -= optind;
-	argv += optind;
+	// Enigma Machine Configuration
+	Machine.SetRotorI(ROTOR_CONF[0]);
+	Machine.SetRotorII(ROTOR_CONF[1]);
+	Machine.SetRotorIII(ROTOR_CONF[2]);
+
+	for(int i = 0; i < PLUG_CONFIG.length(); i +=2 ){
+		Machine.PlugBoard(PLUG_CONFIG[i],PLUG_CONFIG[i+1]);
+	}
+	
+
+	if(outputFile)
+    	outFile.open(OUT_FILE);
+
+    // Select output FILE | STANDARD OUTPUT
+	ostream & outStream = (outputFile ? outFile : cout);
+
+	if(fromFile){
+		ifstream inFile(FILE);
+		if(inFile.is_open()){
+
+			while(getline(inFile, buff)){
+				for (int i = 0; i < buff.length(); i++){
+					if(isalpha(buff[i])){
+						outStream << Machine.EncryptedChar(buff[i]);
+					}else{
+						outStream << buff[i];
+					}
+				}
+			}
+
+			inFile.close();
+		}else{
+			cerr << "Unable to open file" << endl;
+			return 1;
+		}
+
+	}else if(fromMessage){
+		buff = MESSAGE;
+		for (int i = 0; i < buff.length(); i++){
+
+			if(isalpha(buff[i])){
+				outStream << Machine.EncryptedChar(buff[i]);
+			}else{
+				outStream << buff[i];
+			}
+			
+		}
+
+	}
+	
 
 	
 	return 0;
@@ -63,7 +131,7 @@ int main(int argc, char * const argv[])
 
 bool validPlug(string pconfig)
 {
-	// CHeck if are pairs
+	// Check if are pairs
 	if(pconfig.length() % 2 != 0){
 		return false;
 	}
@@ -77,4 +145,9 @@ bool validPlug(string pconfig)
 	}
 
 	return true;
+}
+
+void help(){
+	cout << "TODO:// Print Help...." << endl;
+	return;
 }
