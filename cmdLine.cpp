@@ -68,16 +68,17 @@ int main(int argc, char * const argv[])
  			case '?':
  				return 1;
 			default:
-				cerr << "Unknown Option: " << endl;
+				cerr << "Unknown Option"<< endl;
 				return 1;
 		}
 	}
 
-	// Enigma Machine Configuration
+	// Enigma Machine ROTOR Configuration
 	Machine.SetRotorI(ROTOR_CONF[0]);
 	Machine.SetRotorII(ROTOR_CONF[1]);
 	Machine.SetRotorIII(ROTOR_CONF[2]);
 
+	// Enigma PlugBoard Configuration
 	for(int i = 0; i < PLUG_CONFIG.length(); i +=2 ){
 		Machine.PlugBoard(PLUG_CONFIG[i],PLUG_CONFIG[i+1]);
 	}
@@ -86,7 +87,7 @@ int main(int argc, char * const argv[])
 	if(outputFile)
     	outFile.open(OUT_FILE);
 
-    // Select output FILE | STANDARD OUTPUT
+	// Select output FILE | STANDARD OUTPUT
 	ostream & outStream = (outputFile ? outFile : cout);
 
 	if(fromFile){
@@ -122,8 +123,6 @@ int main(int argc, char * const argv[])
 		}
 
 	}
-	
-
 	
 	return 0;
 }
