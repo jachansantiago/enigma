@@ -150,32 +150,32 @@ Enigma::Enigma()
 	RotorIII[25] = 14;
 
 	// Set Reflector Paths 
-	Reflector[0] = 19;
-	Reflector[1] = 20;
-	Reflector[2] = 21;
-	Reflector[3] = 22;
-	Reflector[4] = 23;
-	Reflector[5] = 24;
-	Reflector[6] = 25;
-	Reflector[7] = 13;
-	Reflector[8] = 14;
-	Reflector[9] = 15;
-	Reflector[10] = 16;
-	Reflector[11] = 17;
-	Reflector[12] = 18;
-	Reflector[13] = 7;
-	Reflector[14] = 8;
-	Reflector[15] = 9;
-	Reflector[16] = 10;
-	Reflector[17] = 11;
-	Reflector[18] = 12;
-	Reflector[19] = 0;
-	Reflector[20] = 1;
-	Reflector[21] = 2;
-	Reflector[22] = 3;
-	Reflector[23] = 4;
-	Reflector[24] = 5;
-	Reflector[25] = 6;
+	Reflector[0] = 24;
+	Reflector[1] = 17;
+	Reflector[2] = 20;
+	Reflector[3] = 7;
+	Reflector[4] = 16;
+	Reflector[5] = 18;
+	Reflector[6] = 11;
+	Reflector[7] = 3;
+	Reflector[8] = 15;
+	Reflector[9] = 23;
+	Reflector[10] = 13;
+	Reflector[11] = 6;
+	Reflector[12] = 14;
+	Reflector[13] = 10;
+	Reflector[14] = 12;
+	Reflector[15] = 8;
+	Reflector[16] = 4;
+	Reflector[17] = 1;
+	Reflector[18] = 5;
+	Reflector[19] = 25;
+	Reflector[20] = 2;
+	Reflector[21] = 22;
+	Reflector[22] = 21;
+	Reflector[23] = 9;
+	Reflector[24] = 0;
+	Reflector[25] = 19;
 
 	ResetPlugBoard();
 
