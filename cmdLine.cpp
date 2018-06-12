@@ -29,7 +29,7 @@ int main(int argc, char * const argv[])
 	string OUT_FILE;
 	Enigma Machine;
 
-	while( (c = getopt(argc, argv, "h:f:r:p:w:m:o:")) != EOF){
+	while( (c = getopt(argc, argv, "hf:r:p:w:m:o:")) != EOF){
 		switch(c){
 			case 'h':
 				help();
@@ -58,9 +58,9 @@ int main(int argc, char * const argv[])
  				MESSAGE = optarg;
  				break;
  			case 'w':
- 				if (optarg[0] == '0'){
- 					space = false;
- 				}
+ 		
+ 				space = false;
+
  				break;
  			case 'o':
  				outputFile = true;
@@ -72,6 +72,12 @@ int main(int argc, char * const argv[])
 				cerr << "Unknown Option"<< endl;
 				return 1;
 		}
+	}
+
+	if(!fromMessage && !fromFile){
+		cerr << "No Message to encode or decode." << endl;
+		cerr << "Specify message with -m <message> or -f <filename>" << endl;
+		return 1;
 	}
 
 	// Enigma Machine ROTOR Configuration
@@ -173,6 +179,19 @@ bool validPlug(string pconfig)
 }
 
 void help(){
-	cout << "TODO:// Print Help...." << endl;
+	//cout << "TODO:// Print Help...." << endl;
+	cout << "Usage: enigma [-m <message> | -f <filename>] [-r <ROTOR CONFIGURATION>]" << endl
+		 << "              [-p <PLUGBOARD CONFIGURATION>][-o <output_filename>] [-w] " << endl
+		 << endl
+		 << "      Command Summary:" << endl
+		 << "          -m :	<message>	Encode from plain message." << endl
+		 << "          -f :	<filename>	Encode from file." << endl
+		 << "          -o : <filename>  Output into a file." << endl
+		 << "          -r : ABC         Tree letters A, B, and C where Rotor I is to A," << endl
+		 << "                           Rotor II to B, and Rotor III to C (required)" << endl
+		 << "          -p :	<CONFIG>    Pairs of letters that are interchange " << endl
+		 << "                           in the plugboard." << endl
+		 << "          -w :             Skip whitespaces." << endl;
+
 	return;
 }
