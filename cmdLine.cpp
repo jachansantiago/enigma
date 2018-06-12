@@ -58,7 +58,7 @@ int main(int argc, char * const argv[])
  				MESSAGE = optarg;
  				break;
  			case 'w':
- 				if (optarg == "0"){
+ 				if (optarg[0] == '0'){
  					space = false;
  				}
  				break;
@@ -98,7 +98,7 @@ int main(int argc, char * const argv[])
 			while(getline(inFile, buff)){
 
 				// Skip first endl
-				if(!skip_endl){
+				if(!skip_endl && space){
 					outStream << endl;
 				}else{
 					skip_endl = false;
@@ -108,7 +108,13 @@ int main(int argc, char * const argv[])
 					if(isalpha(buff[i])){
 						outStream << Machine.EncryptedChar(buff[i]);
 					}else{
-						outStream << buff[i];
+
+						if(space){
+							outStream << buff[i];
+						}
+						else if(!isspace(buff[i])){
+							outStream << buff[i];
+						}
 					}
 				}
 
@@ -127,7 +133,12 @@ int main(int argc, char * const argv[])
 			if(isalpha(buff[i])){
 				outStream << Machine.EncryptedChar(buff[i]);
 			}else{
-				outStream << buff[i];
+				if(space){
+					outStream << buff[i];
+				}
+				else if(!isspace(buff[i])){
+					outStream << buff[i];
+				}
 			}
 			
 		}
