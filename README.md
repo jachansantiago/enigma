@@ -63,3 +63,6 @@ $./enigma -m "RKRUC HXKTA." -r QWR -o output_file.txt
 
 ## Message requirements
 _This Enigma machine do not accept Numbers and other characters except a-z & A-Z in english language._
+
+## LICENSE
+Enigma is released under the [MIT license](https://github.com/jeffrey-chan/enigma/blob/master/LICENSE).
