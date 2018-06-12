@@ -124,6 +124,11 @@ int main(int argc, char * const argv[])
 
 	}
 	
+	outStream << endl;
+
+	if(outputFile)
+    	outFile.close();
+	
 	return 0;
 }
 
