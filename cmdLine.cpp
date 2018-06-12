@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <unistd.h>
-#include "Enigma.h"
+#include "enigma.h"
 
 using namespace std;
 

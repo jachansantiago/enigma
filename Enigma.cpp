@@ -1,4 +1,4 @@
-#include "Enigma.h"
+#include "enigma.h"
 #include <iostream>
 
 using namespace std;
