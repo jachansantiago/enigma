@@ -7,8 +7,11 @@ Enigma has two essential components **rotors** and the **plugboard**.  The rotor
 
 ## Security
 Until Alan Turing built a machine to decode the Enigma Machine this algorithm was safe. Now with a computer is easier to crack this encryption. More information about crack enigma [click here](https://www.youtube.com/watch?v=V4V2bpZlqx8).
-
-## Install
+## Getting Started
+### Prerequisites
+  * Unix-like operating system (macOS or Linux)
+  * `g++` and `git` should be installed 
+### Install
 
 In the shell on the directory path write: 
 ```
@@ -16,8 +19,6 @@ In the shell on the directory path write:
   $ cd enigma 
   $ make all
 ```
-
-## Getting Started
 #### Encrypt 
 ```
 $./enigma -m "my secret message" -r QWR -p AZGOPR
