@@ -25,9 +25,9 @@ $./enigma -m "my secret message" -r QWR -p AZGOPR
 FL FJGVJE DHFJUVJ
 ```
 ##### Options
-  * -m <_your message_>: message to decode or encode. 
-  * -r _ABC_ (**required**) : Tree letters A, B, and C where Rotor I is to A, Rotor II to B, and Rotor III to C
-  * -p _<letter pairs>_ : Pairs of letters that are interchange in the plugboard.
+  * `-m <_your message_>`: message to decode or encode. 
+  * `-r _ABC_` (**required**) : Tree letters A, B, and C where Rotor I is to A, Rotor II to B, and Rotor III to C
+  * `-p _<letter pairs>_` : Pairs of letters that are interchange in the plugboard.
   
 In this example encode the message _"my secret message"_ using the following configuration:
 
@@ -53,14 +53,17 @@ MY SECRET MESSAGE
 ```
 
 ## Deals with files
-* -f <_input filename_>
-* -o <_output filename_>
+* `-f <_input filename_>`
+* `-o <_output filename_>`
 
 ```
 $./enigma -r QWR -f input_file.txt
 RKRUC HXKTA.
 $./enigma -m "RKRUC HXKTA." -r QWR -o output_file.txt
 ```
+## Other Options
+* `-h` print help
+* `-w` Skip white spaces in the output
 
 ## Message requirements
 _This Enigma machine does not accept Numbers and other characters except a-z & A-Z in the English language._
