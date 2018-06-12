@@ -25,9 +25,9 @@ $./enigma -m "my secret message" -r QWR -p AZGOPR
 FL FJGVJE DHFJUVJ
 ```
 ##### Options
-  * `-m <_your message_>`: message to decode or encode. 
-  * `-r _ABC_` (**required**) : Tree letters A, B, and C where Rotor I is to A, Rotor II to B, and Rotor III to C
-  * `-p _<letter pairs>_` : Pairs of letters that are interchange in the plugboard.
+  * `-m <your message>`: message to decode or encode. 
+  * `-r <A><B><C>` (**required**) : Tree letters A, B, and C where Rotor I is to A, Rotor II to B, and Rotor III to C
+  * `-p <letter pairs>` : Pairs of letters that are interchange in the plugboard.
   
 In this example encode the message _"my secret message"_ using the following configuration:
 
