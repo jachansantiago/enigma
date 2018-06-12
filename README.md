@@ -22,7 +22,7 @@ In the shell on the directory path write:
 #### Encrypt 
 ```
 $./enigma -m "my secret message" -r QWR -p AZGOPR
-FL FJGVJE DHFJUVJ
+HU GLEZAE USXBQZC
 ```
 ##### Options
   * `-m <your message>`: message to decode or encode. 
@@ -42,13 +42,13 @@ In this example encode the message _"my secret message"_ using the following con
 
 #### Decrypt (WRONG)
 ```
-$./enigma -m "FL FJGVJE DHFJUVJ" -r QWR 
-MY SEQPET MESSZOE
+$./enigma -m "HU GLEZAE USXBQZC" -r QWR 
+MY EECDST MESSZVE
 ```
 _Note that if the message was encrypted with plugboard configuration, to decrypt the message need the same configuration._
 #### Decrypt
 ```
-$./enigma -m "FL FJGVJE DHFJUVJ" -r QWR -p AZGOPR
+$./enigma -m "HU GLEZAE USXBQZC" -r QWR -p AZGOPR
 MY SECRET MESSAGE
 ```
 
@@ -58,8 +58,8 @@ MY SECRET MESSAGE
 
 ```
 $./enigma -r QWR -f input_file.txt
-RKRUC HXKTA.
-$./enigma -m "RKRUC HXKTA." -r QWR -o output_file.txt
+MSXEP LMXPX.
+$./enigma -m "MSXEP LMXPX." -r QWR -o output_file.txt
 ```
 ## Other Options
 * `-h` print help
