@@ -1,7 +1,12 @@
-# Enigma Machine
+# Enigma
+
+## Introduction
 This repository contains an enigma machine simulator as command line tool. The enigma machine was one of the first encryption devices used to hide military messages during wars. This machine can encode a message, and it's able to decode the encoded message using the same configuration with was encoded. 
 
 Enigma has two essential components **rotors** and the **plugboard**.  The rotors change in when pressing a key this is made more difficult to decode. Plugboard only interchange letters between them.  To encode a message the rotors and plugboard need to be set. To set the rotors, a letter needs to be assigned to each rotor. This simulator only has three rotors.  The plugboard configuration consists of pairs of letters, and each letter has a one-to-one relationship. An example [A-F, H-K, L-O], [A-S, H-J], [] are valid configurations [A-G, G-H] isn't. To decode a message the rotor and plugboard configuration has to be the same. For more information about Enigma machine [click here](https://youtu.be/G2_Q9FoD-oQ). 
+
+## Security
+Until Alan Turing built a machine to decode the Enigma Machine this algorithm was safe. Now with a computer is easier to crack this encryption. More information about crack enigma [click here](https://www.youtube.com/watch?v=V4V2bpZlqx8).
 
 ## Install
 
@@ -55,7 +60,6 @@ $./enigma -r QWR -f input_file.txt
 RKRUC HXKTA.
 $./enigma -m "RKRUC HXKTA." -r QWR -o output_file.txt
 ```
-
 
 ## Message requirements
 _This Enigma machine do not accept Numbers and other characters except a-z & A-Z in english language._
