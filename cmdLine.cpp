@@ -22,6 +22,7 @@ int main(int argc, char * const argv[])
 	bool plugBoard = false;
 	bool fromMessage = false;
 	bool space = true;
+	bool skip_endl = true;
 	string FILE = "";
 	string input;
 	ofstream outFile;
@@ -95,6 +96,14 @@ int main(int argc, char * const argv[])
 		if(inFile.is_open()){
 
 			while(getline(inFile, buff)){
+
+				// Skip first endl
+				if(!skip_endl){
+					outStream << endl;
+				}else{
+					skip_endl = false;
+				}
+
 				for (int i = 0; i < buff.length(); i++){
 					if(isalpha(buff[i])){
 						outStream << Machine.EncryptedChar(buff[i]);
@@ -102,6 +111,7 @@ int main(int argc, char * const argv[])
 						outStream << buff[i];
 					}
 				}
+
 			}
 
 			inFile.close();
