@@ -94,32 +94,32 @@ Enigma::Enigma()
 	RotorI[25] = 9;
 
 	// Set RotorII values
-	RotorII[0] = 4;
+	RotorII[0] = 0;
 	RotorII[1] = 9;
-	RotorII[2] = 14;
-	RotorII[3] = 19;
-	RotorII[4] = 24;
-	RotorII[5] = 3;
-	RotorII[6] = 8;
-	RotorII[7] = 13;
-	RotorII[8] = 18;
-	RotorII[9] = 23;
-	RotorII[10] = 2;
+	RotorII[2] = 3;
+	RotorII[3] = 10;
+	RotorII[4] = 18;
+	RotorII[5] = 8;
+	RotorII[6] = 17;
+	RotorII[7] = 20;
+	RotorII[8] = 23;
+	RotorII[9] = 1;
+	RotorII[10] = 11;
 	RotorII[11] = 7;
-	RotorII[12] = 12;
-	RotorII[13] = 17;
-	RotorII[14] = 22;
-	RotorII[15] = 1;
-	RotorII[16] = 6;
-	RotorII[17] = 11;
-	RotorII[18] = 16;
-	RotorII[19] = 21;
-	RotorII[20] = 0;
-	RotorII[21] = 5;
-	RotorII[22] = 10;
-	RotorII[23] = 15;
-	RotorII[24] = 20;
-	RotorII[25] = 25;
+	RotorII[12] = 22;
+	RotorII[13] = 19;
+	RotorII[14] = 12;
+	RotorII[15] = 2;
+	RotorII[16] = 16;
+	RotorII[17] = 6;
+	RotorII[18] = 25;
+	RotorII[19] = 13;
+	RotorII[20] = 15;
+	RotorII[21] = 24;
+	RotorII[22] = 5;
+	RotorII[23] = 21;
+	RotorII[24] = 14;
+	RotorII[25] = 4;
 
 	// Set RotorIII values
 	RotorIII[0] = 25;
