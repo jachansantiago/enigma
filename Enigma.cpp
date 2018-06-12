@@ -122,32 +122,32 @@ Enigma::Enigma()
 	RotorII[25] = 4;
 
 	// Set RotorIII values
-	RotorIII[0] = 25;
-	RotorIII[1] = 23;
-	RotorIII[2] = 21;
-	RotorIII[3] = 19;
-	RotorIII[4] = 17;
-	RotorIII[5] = 15;
-	RotorIII[6] = 13;
-	RotorIII[7] = 11;
-	RotorIII[8] = 9;
-	RotorIII[9] = 7;
-	RotorIII[10] = 5;
-	RotorIII[11] = 3;
-	RotorIII[12] = 1;
-	RotorIII[13] = 24;
-	RotorIII[14] = 22;
-	RotorIII[15] = 20;
-	RotorIII[16] = 18;
-	RotorIII[17] = 16;
-	RotorIII[18] = 14;
-	RotorIII[19] = 12;
+	RotorIII[0] = 1;
+	RotorIII[1] = 3;
+	RotorIII[2] = 5;
+	RotorIII[3] = 7;
+	RotorIII[4] = 9;
+	RotorIII[5] = 11;
+	RotorIII[6] = 2;
+	RotorIII[7] = 15;
+	RotorIII[8] = 17;
+	RotorIII[9] = 19;
+	RotorIII[10] = 23;
+	RotorIII[11] = 21;
+	RotorIII[12] = 25;
+	RotorIII[13] = 13;
+	RotorIII[14] = 24;
+	RotorIII[15] = 4;
+	RotorIII[16] = 8;
+	RotorIII[17] = 22;
+	RotorIII[18] = 6;
+	RotorIII[19] = 0;
 	RotorIII[20] = 10;
-	RotorIII[21] = 8;
-	RotorIII[22] = 6;
-	RotorIII[23] = 4;
-	RotorIII[24] = 2;
-	RotorIII[25] = 0;
+	RotorIII[21] = 12;
+	RotorIII[22] = 20;
+	RotorIII[23] = 18;
+	RotorIII[24] = 16;
+	RotorIII[25] = 14;
 
 	// Set Reflector Paths 
 	Reflector[0] = 19;
