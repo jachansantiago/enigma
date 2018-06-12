@@ -1,14 +1,14 @@
 all: commandLine
 
 enigmaMachine: enigma.o client.o 
-	g++ -o enigma Enigma.o client.o 
+	g++ -o enigma enigma.o client.o 
 	make clean
 commandLine: enigma.o cmdLine.o
-	g++ -o enigma Enigma.o cmdLine.o
+	g++ -o enigma enigma.o cmdLine.o
 	make clean
 
-enigma.o: Enigma.cpp Enigma.h
-	g++ -c Enigma.cpp
+enigma.o: enigma.cpp enigma.h
+	g++ -c enigma.cpp
 
 client.o: client.cpp
 	g++ -c client.cpp
