@@ -187,7 +187,7 @@ void help(){
 		 << "          -m :	<message>	Encode from plain message." << endl
 		 << "          -f :	<filename>	Encode from file." << endl
 		 << "          -o : <filename>  Output into a file." << endl
-		 << "          -r : ABC         Tree letters A, B, and C where Rotor I is to A," << endl
+		 << "          -r : <ABC>       Tree letters A, B, and C where Rotor I is to A," << endl
 		 << "                           Rotor II to B, and Rotor III to C (required)" << endl
 		 << "          -p :	<CONFIG>    Pairs of letters that are interchange " << endl
 		 << "                           in the plugboard." << endl
